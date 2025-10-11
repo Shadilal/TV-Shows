@@ -12,13 +12,13 @@ function Home() {
     },[])
   return (
     <div>
-      <div className="container">
+      <div className="container p-5 ">
         <div className="row">
           {shows && shows.length > 0 ? (
             shows.map((show, index) => (
-              <div className="col-12 col-sm-12 col-md-6 col-lg-3 p-5">
-                <article key={index}>
-                  <img src={show.image.medium} alt="" />
+              <div className="col-12 col-sm-12 col-md-6 col-lg-3 ">
+                <article className='p-4' style={{height:"400px",width:"300px"}} key={index}>
+                  <img style={{width:"100%",height:"100%",objectFit:"cover"}} src={show.image.medium} alt="" />
                   <h5 className="text-dark">{show.name}</h5>
                 </article>
               </div>

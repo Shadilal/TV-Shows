@@ -1,0 +1,11 @@
+
+#arc {
+  transition: transform 0.3s ease;
+  
+}
+
+#arc:hover #show {
+  transform: translateY(-200px);
+  transition: transform 0.3s ease;
+  
+}

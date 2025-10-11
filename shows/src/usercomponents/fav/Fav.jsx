@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function Fav() {
+    useState(()=>{
+        
+    },[])
   return (
     <div>
-        <h1>Fav</h1>
+        
     </div>
   )
 }
