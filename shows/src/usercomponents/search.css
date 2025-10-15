@@ -9,3 +9,16 @@
   transition: transform 0.3s ease;
   
 }
+body{
+  background-color: black;
+  color: white;
+}
+
+#article:hover #show {
+  transform: translateY(-100px);
+  transition: transform 0.3s ease;
+  
+}
+#show{
+  padding: 10px;
+}

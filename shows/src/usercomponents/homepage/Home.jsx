@@ -6,7 +6,7 @@ function Home() {
         fetch("https://api.tvmaze.com/show")
         .then((res)=> res.json())
         .then((data)=>{
-            console.log(data)
+            console.log("---------------------------------------->",data)
             setShows(data)
         }).catch(err=> console.log(err.message))
     },[])
@@ -19,7 +19,7 @@ function Home() {
               <div className="col-12 col-sm-12 col-md-6 col-lg-3 ">
                 <article className='p-4' style={{height:"400px",width:"300px"}} key={index}>
                   <img style={{width:"100%",height:"100%",objectFit:"cover"}} src={show.image.medium} alt="" />
-                  <h5 className="text-dark">{show.name}</h5>
+                  <h5 className="text-white">{show.name}</h5>
                 </article>
               </div>
             ))

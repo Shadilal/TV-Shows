@@ -5,13 +5,14 @@ import '../search.css'
 function searchResult() {
    
     const searchResult = useSelector((state)=> state.search.searchValue)
-    console.log("Fetch",searchResult)
+    console.log("Fetch======>",searchResult)
     const dispatch = useDispatch()
     
   return (
     <div>
       <div className="container p-5 ">
         <div className="row">
+          <h2>Search Result!</h2>
           {searchResult && searchResult.length > 0 ? (
             searchResult.map((show) => (
               <div className="col-12 col-lg-3 p-4 ">

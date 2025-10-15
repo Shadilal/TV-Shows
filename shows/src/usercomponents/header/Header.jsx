@@ -1,6 +1,7 @@
 import React, { createContext, useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import {  useNavigate } from 'react-router-dom'
 import {useDispatch} from 'react-redux'
+import { NavLink } from 'react-router-dom'
 import { setValue } from '../Redux/Search'
 
 function Header() {
@@ -10,6 +11,7 @@ function Header() {
     const navigate = useNavigate()
     const handleSearch = (start)=>{
         console.log(start)
+        if(start === "") return 
        fetch(`https://api.tvmaze.com/search/shows?q={${start}}`)
        .then((res)=> res.json())
        .then((data)=>{
@@ -41,15 +43,15 @@ function Header() {
             </div>
             <ul className="nav gap-5">
               <li className="nav-items">
-                <Link className="text-decoration-none text-black" to="/">
+                <NavLink className={({isActive})=> isActive? "text-success text-decoration-none" : "text-white text-decoration-none"} to={"/"}>
                   Home
-                </Link>
+                </NavLink>
               </li>
               
               <li className="nav-items">
-                <Link className="text-decoration-none text-black" to="/fav">
+                <NavLink className={({isActive})=> isActive? "text-success text-decoration-none" : "text-white text-decoration-none"} to={"/fav"}>
                   Favorites
-                </Link>
+                </NavLink>
               </li>
             </ul>
           </div>

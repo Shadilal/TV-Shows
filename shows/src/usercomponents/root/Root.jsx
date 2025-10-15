@@ -4,7 +4,7 @@ import { Outlet } from 'react-router-dom'
 function Root() {
   return (
     <div>
-      <header className='border'>
+      <header className=' p-5'>
         <Header />
       </header>
 
