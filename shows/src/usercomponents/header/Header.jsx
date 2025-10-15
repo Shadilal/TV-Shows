@@ -28,7 +28,7 @@ function Header() {
           <div className="col-12  d-flex justify-content-between align-items-center">
             <h1>ShowsZone</h1>
             <div className="search  p-2 d-flex justify-item-center align-items-center">
-              <input type="text" name="" value={search} onChange={(event)=> setSearch(event.target.value)} placeholder='search...' className="form-control" id="" />
+              <input type="text"  style={{width:"400px"}} name="" value={search} onChange={(event)=> setSearch(event.target.value)} placeholder='search...' className="form-control bg-dark text-white" id="" />
               <button onClick={()=> handleSearch(search)} className='btn btn-primary'>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
